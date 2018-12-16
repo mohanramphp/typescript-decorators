@@ -1,13 +1,20 @@
 {
-  "extends": "./node_modules/gts/tsconfig-google.json",
-  "compilerOptions": {
-    "rootDir": ".",
-    "outDir": "build"
-  },
-  "include": [
-    "src/*.ts",
-    "src/**/*.ts",
-    "test/*.ts",
-    "test/**/*.ts"
-  ]
+    "include": [
+        "src/*.ts",
+        "src/**/*.ts"
+    ],
+    "exclude": [
+        "./dist",
+        "./node_modules"
+    ],
+    "compilerOptions": {
+        "rootDir": "./src",
+        "outDir": "./dist/",
+        "noImplicitAny": false,
+        "sourceMap": true,
+        "module": "commonjs",
+        "target": "es5",
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+    }
 }
