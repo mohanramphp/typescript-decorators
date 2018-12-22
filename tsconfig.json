@@ -5,7 +5,8 @@
     ],
     "exclude": [
         "./dist",
-        "./node_modules"
+        "./node_modules",
+        "./src/gist"
     ],
     "compilerOptions": {
         "rootDir": "./src",

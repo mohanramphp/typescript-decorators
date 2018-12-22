@@ -2,6 +2,8 @@ import { logMethod, configureMethod } from './method-decorator';
 import { logProperty } from './property-decorator';
 import { logParameter } from './parameter-decorator';
 import { logClass } from './class-decorator';
+import { log } from './decorators';
+
 
 class JoiningKit {
 
@@ -51,3 +53,21 @@ emp.getAge();
 for (let i in emp) {
     console.log(i);
 }
+
+@log
+class Person {
+
+    constructor(
+        private firstName: string,
+        private lastName: string
+    ) {
+    }
+
+    @log
+    getFullName() {
+        return `${this.firstName} ${this.lastName}`;
+    }
+}
+
+const person = new Person('Mohan', 'Ram');
+person.getFullName();
